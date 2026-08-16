@@ -1,0 +1,17 @@
+model Car {
+  id String @id @default(uuid())
+  brand String
+  model String
+  locaation String
+  ownerId String
+
+  owner User @relation(fields: [ownerId], references: [id])
+  
+  dailyRate Float
+
+  createdAt DateTime @default(now())
+
+  // bookings
+
+  bookings Booking[]
+}
