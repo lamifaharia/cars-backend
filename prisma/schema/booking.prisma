@@ -9,8 +9,8 @@ model  Booking {
 
     carId String
     car Car @relation(fields: [carId], references: [id])
-    rentarlId String
-    renter User @relation(fields: [rentarlId], references: [id])
+    renterId String
+    renter User @relation(fields: [renterId], references: [id])
 
     startDate DateTime
     endDate DateTime
